@@ -1,0 +1,28 @@
+{
+	"name": "play-music-at-coup",
+	"description": "Play music at co.up coworking Berlin.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"co.up",
+		"coup",
+		"berlin",
+		"music",
+		"airplay",
+		"airtunes",
+		"apple tv"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/play-music-at-coup",
+	"repository": "derhuerst/play-music-at-coup",
+	"bugs": "https://github.com/derhuerst/play-music-at-coup/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	}
+}
