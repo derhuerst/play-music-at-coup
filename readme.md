@@ -18,7 +18,10 @@ npm install -g play-music-at-coup
 ## Usage
 
 ```js
-todo
+Play music at co.up coworking Berlin.
+
+Usage:
+	coup-play <audio-url>
 ```
 
 
