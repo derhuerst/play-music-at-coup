@@ -3,8 +3,12 @@
 	"description": "Play music at co.up coworking Berlin.",
 	"version": "0.1.0",
 	"main": "index.js",
+	"bin": {
+		"coup-play": "./bin.js"
+	},
 	"files": [
-		"index.js"
+		"index.js",
+		"bin.js"
 	],
 	"keywords": [
 		"co.up",
@@ -24,5 +28,6 @@
 		"node": ">=6"
 	},
 	"dependencies": {
+		"airplay-protocol": "^2.0.2"
 	}
 }
