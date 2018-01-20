@@ -9,7 +9,7 @@ const play = (audioUrl, cb) => {
 
 	const getInfo = () => {
 		device.playbackInfo((err, res, playbackInfo) => {
-			setTimeout(getInfo, 100)
+			setTimeout(getInfo, 2000)
 
 			if (err) return device.emit('error', err)
 			device.emit('playbackInfo', playbackInfo)
