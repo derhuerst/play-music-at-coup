@@ -1,7 +1,7 @@
 {
 	"name": "play-music-at-coup",
 	"description": "Play music at co.up coworking Berlin.",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"main": "index.js",
 	"bin": {
 		"coup-play": "./bin.js"
