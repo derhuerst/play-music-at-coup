@@ -3,7 +3,6 @@
 **Play music at [co.up coworking Berlin](http://co-up.de/)).**
 
 [![npm version](https://img.shields.io/npm/v/play-music-at-coup.svg)](https://www.npmjs.com/package/play-music-at-coup)
-[![build status](https://api.travis-ci.org/derhuerst/play-music-at-coup.svg?branch=master)](https://travis-ci.org/derhuerst/play-music-at-coup)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/play-music-at-coup.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
 
