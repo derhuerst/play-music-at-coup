@@ -42,10 +42,6 @@ const device = play(audioUrl, (err) => {
 })
 device.on('error', showError)
 
-device.on('playbackInfo', (playbackInfo) => {
-	console.error(playbackInfo)
-})
-
 process.once('beforeExit', () => {
 	device.stop()
 })

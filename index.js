@@ -7,6 +7,15 @@ const ADDRESS = 'Apple-TV-3rd-floor.local'
 const play = (audioUrl, cb) => {
 	const device = new AirPlay(ADDRESS)
 
+	const getInfo = () => {
+		device.playbackInfo((err, res, playbackInfo) => {
+			setTimeout(getInfo, 100)
+
+			if (err) return device.emit('error', err)
+			device.emit('playbackInfo', playbackInfo)
+		})
+	}
+
 	device.play(audioUrl, (err) => {
 		if (err) return cb(err)
 
@@ -21,15 +30,6 @@ const play = (audioUrl, cb) => {
 			})
 		}
 		waitForPlay()
-
-		const getInfo = () => {
-			device.playbackInfo((err, res, playbackInfo) => {
-				setTimeout(getInfo, 3000)
-
-				if (err) device.emit('error', err)
-				else device.emit('playbackInfo', playbackInfo)
-			})
-		}
 	})
 
 	return device
