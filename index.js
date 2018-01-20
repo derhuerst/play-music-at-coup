@@ -2,6 +2,8 @@
 
 const AirPlay = require('airplay-protocol')
 
+const createSetVolume = require('./lib/set-volume')
+
 const ADDRESS = 'Apple-TV-3rd-floor.local'
 
 const play = (audioUrl, cb) => {
@@ -16,20 +18,34 @@ const play = (audioUrl, cb) => {
 		})
 	}
 
-	device.play(audioUrl, (err) => {
+	device.play(audioUrl, (err, res, body) => {
 		if (err) return cb(err)
 
-		const waitForPlay = () => {
-			device.playbackInfo((err, res, playbackInfo) => {
-				if (err) return cb(err)
-
-				if (playbackInfo && playbackInfo.readyToPlay) {
-					getInfo()
-					cb()
-				} else setTimeout(waitForPlay, 500)
+		// wat
+		const a = device._agent
+		const key = a.getName({host: device.host, port: device.port})
+		const socket = (
+			a.freeSockets[key] && a.freeSockets[key][0] ||
+			a.sockets[key] && a.sockets[key][0]
+		)
+		const setVolume = createSetVolume(socket)
+		setTimeout(() => {
+			setVolume(-20, (err) => {
+				if (err) console.error(err) // todo
 			})
-		}
-		waitForPlay()
+		}, 300)
+
+		// const waitForPlay = () => {
+		// 	device.playbackInfo((err, res, playbackInfo) => {
+		// 		if (err) return cb(err)
+
+		// 		if (playbackInfo && playbackInfo.readyToPlay) {
+		// 			getInfo()
+		// 			cb()
+		// 		} else setTimeout(waitForPlay, 500)
+		// 	})
+		// }
+		// waitForPlay()
 	})
 
 	return device
