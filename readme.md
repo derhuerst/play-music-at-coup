@@ -1,6 +1,8 @@
 # play-music-at-coup
 
-**Play music at [co.up coworking Berlin](http://co-up.de/)).**
+**Deprecated.** Use [`play-on-apple-tv`](https://github.com/derhuerst/play-on-apple-tv#play-on-apple-tv) with `Apple-TV-3rd-floor.local` as the address.
+
+Play music at [co.up coworking Berlin](http://co-up.de/).
 
 [![npm version](https://img.shields.io/npm/v/play-music-at-coup.svg)](https://www.npmjs.com/package/play-music-at-coup)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/play-music-at-coup.svg)
