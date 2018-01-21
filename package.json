@@ -1,7 +1,7 @@
 {
 	"name": "play-music-at-coup",
 	"description": "Play music at co.up coworking Berlin.",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"main": "index.js",
 	"bin": {
 		"coup-play": "./bin.js"
@@ -33,6 +33,7 @@
 		"ansi-diff-stream": "^1.2.0",
 		"ansi-escapes": "^3.0.0",
 		"chalk": "^2.3.0",
+		"flatten-overlapping-ranges": "^0.1.1",
 		"mri": "^1.1.0",
 		"window-size": "^1.1.0"
 	}

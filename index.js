@@ -23,6 +23,7 @@ const play = (audioUrl, cb) => {
 			device.playbackInfo((err, res, playbackInfo) => {
 				if (err) return cb(err)
 
+				device.emit('playbackInfo', playbackInfo)
 				if (playbackInfo && playbackInfo.readyToPlay) {
 					getInfo()
 					cb()
